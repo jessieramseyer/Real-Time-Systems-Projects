@@ -1,0 +1,14 @@
+Testing
+
+Before first group is erased: -3, 9593
+
+After first group is erased: -3, 9593
+
+After second group is erased: 23, 9593
+
+After third group is erased: 140, 9593
+
+After fourth group is erased: 140, 9265
+
+After fifth group is erased: 2147483647, -2147483648
+

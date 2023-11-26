@@ -1,0 +1,10 @@
+.\objects\sim\rtx_config.o: RTE\CMSIS\RTX_Config.c
+.\objects\sim\rtx_config.o: C:\Users\ramse\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h
+.\objects\sim\rtx_config.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\sim\rtx_config.o: C:\Users\ramse\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armcc.h
+.\objects\sim\rtx_config.o: C:\Users\ramse\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include\rtx_os.h
+.\objects\sim\rtx_config.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+.\objects\sim\rtx_config.o: C:\Users\ramse\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\Include\cmsis_os2.h
+.\objects\sim\rtx_config.o: C:\Users\ramse\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\Include\rtx_def.h
+.\objects\sim\rtx_config.o: .\RTE\_Lab5_SIM\RTE_Components.h
+.\objects\sim\rtx_config.o: .\RTE\CMSIS\RTX_Config.h
