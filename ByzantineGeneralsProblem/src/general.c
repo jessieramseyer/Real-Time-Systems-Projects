@@ -19,6 +19,7 @@ osSemaphoreId_t turnstile1, turnstile2;
 osMutexId_t mutex;
 int count;
 uint8_t N_Generals;
+// m = # of traitors
 uint8_t m;
 uint8_t Reporter;
 
@@ -96,6 +97,7 @@ void OM(uint8_t order, char* command, uint8_t id){
 	if(order >0){
 		
 		if(loyalty[id] == false){
+			// modify the message if the general is a traitor
 			char traitorCommand = id % 2 == 0 ? 'R' : 'A';
 			*strstr(command, "R") = traitorCommand;
 			*strstr(command, "A") = traitorCommand;
@@ -111,17 +113,22 @@ void OM(uint8_t order, char* command, uint8_t id){
 			const char* nn = n;
 			const char* commandc = newcommand;
 			
+			// if the id (i) of the current general is not in the command already, send the message
 			if(strstr(commandc, nn)== 0)
 			{
 				 osMessageQueuePut(general_queues[i][order], newcommand, 0, 0);
 			}			
 		}
 		
+		// synchronize all the general threads
+		// this waits for all the general threads to send their messages 
+		// before each general starts to read the messages they got
 		reusableBarrier(order);
 		
 		char message[7];
 		
 		while(osMessageQueueGet(general_queues[id][order], message, 0, 0) == osOK){
+			// forward each message received to the other generals
 			OM(order-1, message, id);
 		}
 
